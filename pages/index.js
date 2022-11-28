@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Banner from "../components/Banner.js";
 import Nav from "../components/Nav.js";
+import Footer from "../components/Footer.js";
 // import styles from "../styles/Home.module.css";
 
 
@@ -11,9 +12,9 @@ export default function Home() {
       "position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; position:right-[20%] z-index-1",
     imageWrapper: "relative w-full ",
   };
-
   const handleOnBannerBtnClick = () => {
-    buttonText = "Java Store";
+    buttonTextStores;
+    buttonTextProducts
   };
   return (
     <div className={styles.container}>
@@ -33,10 +34,16 @@ export default function Home() {
         />
       </div>
       <main>
-        <Banner buttonText="Java!!" handleOnClick={handleOnBannerBtnClick} />
+        <Banner
+          buttonTextStores="Java Joints"
+          buttonTextProducts="Java Juice"
+          handleOnClick={handleOnBannerBtnClick}
+        />
       </main>
 
-      <footer></footer>
+      <footer className="inset-px">
+        <Footer />
+      </footer>
     </div>
   );
 }

@@ -12,11 +12,14 @@ body {
  /* height: 100vph;
  width: 100vph; */
   background: url("/static/Background.png");
-  background-posision: 50%;
+  background-posision: 100% 100%;
   background-repeat: no-repeat;
   background-size: fill;
   /* setting all color of my text to be this */
   color: #111111;
+
+  width: 100vpw;
+  height: 100vph;
 
 }
 /* 

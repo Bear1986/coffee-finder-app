@@ -1,3 +1,4 @@
+
 import React from "react";
 import Image from "next/image";
 import signature from "../public/static/signature.png";
@@ -9,14 +10,15 @@ import { Tooltip } from "@nextui-org/react";
 
 function Nav() {
   const styles = {
-    navWrapper: "display-flex flex-col bg-yellow-700 mb-[1rem] p-1",
+    navWrapper: "display-flex flex-col bg-yellow-700 mb-[1rem] p-1 ",
     iconsWrapper: "justify-between w-[10rem]",
     icons: "",
     iconsButton: "hover:bg-yellow-500 rounded-full mt-2 ml-3",
     buttonWrapper: "",
-    button: "pt-1 bg-yellow-400  w-[10rem] text-center ",
+    button: "pt-1 bg-yellow-400  w-[10rem] text-center w-[12rem]",
   };
   return (
+
     <div className={styles.navWrapper}>
       <div className="flex justify-between">
         <div>
@@ -46,7 +48,7 @@ function Nav() {
           </button>
         </Tooltip>
       </div>
-    </div>
+      </div>
   );
 }
 
