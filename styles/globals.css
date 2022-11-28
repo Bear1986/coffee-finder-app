@@ -1,11 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+  /* set the background throuout the application with the gradiant I found at: meshgradient.com */
+ /* height: 100vph;
+ width: 100vph; */
+  background: url("/static/Background.png");
+  background-posision: 50%;
+  background-repeat: no-repeat;
+  background-size: fill;
+  /* setting all color of my text to be this */
+  color: #111111;
 
+}
+/* 
 a {
   color: inherit;
   text-decoration: none;
@@ -23,4 +37,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */
