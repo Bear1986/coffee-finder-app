@@ -21,8 +21,8 @@ const Card = (props) => {
           <Image
             src={props.url}
             alt={props.name}
-            width={280}
-            height={210}
+            width={200}
+            height={200}
             className="rounded-2xl p-1 "
           />
         </div>
@@ -33,20 +33,23 @@ const Card = (props) => {
         </div>
       </Link>
       <button className="hover:bg-yellow-400  rounded-full text-center w-[2rem] h-[2rem] ml-2">
-        <Tooltip content="add to liked" placement="bottom">
+        <Tooltip content="like" placement="bottom" color="invert">
           <IconContext.Provider value={{ color: "black", size: "1.5rem" }}>
             <AiFillLike className="mt-[0.3rem] pb-[0.1rem] " />
           </IconContext.Provider>
         </Tooltip>
       </button>
       <button className="hover:bg-yellow-400  rounded-full text-center w-[2rem] h-[2rem]">
-        <Tooltip content="share with the world" placement="right">
+        <Tooltip
+          content="share with the world"
+          placement="right"
+          color="invert"
+        >
           <IconContext.Provider value={{ color: "black", size: "1.5rem" }}>
             <FaShareAlt className="mt-[0.3rem]  pr-[0.3rem]" />
           </IconContext.Provider>
         </Tooltip>
       </button>
-
     </div>
   );
 };

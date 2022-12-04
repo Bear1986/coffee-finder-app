@@ -1,12 +1,16 @@
-import { Modal, useModal, Button, Text } from "@nextui-org/react";
+import { Modal, useModal, Button, Text, Tooltip } from "@nextui-org/react";
+import signature from "../public/static/signature.png";
+import Image from "next/image";
 
 export default function AboutModel() {
   const { setVisible, bindings } = useModal();
   return (
     <div>
-      <Button auto shadow color="secondary" onClick={() => setVisible(true)}>
-        Open modal
-      </Button>
+      <Tooltip content="about me" placement="bottom" color="invert">
+        <Button onClick={() => setVisible(true)} color="yellow">
+          <Image width={220} src={signature} alt="signature of Art Beckett" className="pt-3" />
+        </Button>
+      </Tooltip>
       <Modal
         scroll
         width="600px"
@@ -15,7 +19,7 @@ export default function AboutModel() {
         {...bindings}
       >
         <Modal.Header>
-          <Text id="modal-title" size={18}>
+          <Text id="modal-title" size={40}>
             Modal with a lot of content
           </Text>
         </Modal.Header>
@@ -50,7 +54,7 @@ export default function AboutModel() {
             purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
             egestas eget quam. Morbi leo risus, porta ac consectetur ac,
             vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. 
+            nisl consectetur et.
           </Text>
         </Modal.Body>
         <Modal.Footer>

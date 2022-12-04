@@ -17,7 +17,7 @@ function Footer() {
           className="p-3"
         // buymeacoffee.com/?via=artbbecketX
         >
-          <Tooltip content="buy me a coffee" placement="right">
+          <Tooltip content={"buy me a coffee"} placement="right" color="invert">
             <IconContext.Provider value={{ color: "black", size: "2.5rem" }}>
               <SiBuymeacoffee />
             </IconContext.Provider>

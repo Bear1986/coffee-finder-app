@@ -6,6 +6,8 @@ import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 import { IconContext } from "react-icons";
 // tooltip
 import { Tooltip } from "@nextui-org/react";
+//About
+import AboutModel from "./AboutModel";
 
 function Nav() {
   const styles = {
@@ -41,11 +43,7 @@ function Nav() {
               </button>
             </IconContext.Provider>
           </div>
-          <Tooltip content="about me" placement="bottom">
-            <a className={styles.button}>
-              <Image src={signature} alt="signature" />
-            </a>
-          </Tooltip>
+<AboutModel />
         </div>
       </div>
       <div className=" bg-[#111111] w-full h-1 mb-[1rem]"></div>
