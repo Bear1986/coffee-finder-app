@@ -5,6 +5,18 @@ export default function Document() {
     <Html>
       <Head />
       <link rel="shortcut icon" href="/static/favicon.ico" />
+      <link
+        rel="preload"
+        href="/public/static/fonts/GloriaHallelujah-Regular.ttf"
+        as="font"
+        crossOrigin="anonymous"
+      ></link>
+      <link
+        rel="preload"
+        href="/public/static/fonts/CourierPrime-Regular.ttf"
+        as="font"
+        crossOrigin="anonymous"
+      ></link>
       <body>
         <Main />
         <NextScript />
@@ -12,4 +24,3 @@ export default function Document() {
     </Html>
   );
 }
-

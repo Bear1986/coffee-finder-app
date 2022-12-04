@@ -1,22 +1,30 @@
 import React from "react";
 import { Tooltip } from "@nextui-org/react";
-import logo from "../public/static/logoWithoutBackground.png";
-import Image from "next/image";
+// import logo from "../public/static/logoWithoutBackground.png";
+// import Image from "next/image";
+import { IconContext } from "react-icons";
+import {SiBuymeacoffee} from "react-icons/si"
 
 
 function Footer() {
-   return (<>
-      <div className=" bg-yellow-700 w-full h-1 mt-5"></div>
-    <div className="flex flex-">
-
-      <button>
-        <Tooltip content="buy me a coffee" placement="right">
-          <Image src={logo} alt="logo" width={80} height={80} />
-        </Tooltip>
+  
+  return (
+    <>
+      <div className=" bg-[#111111] w-full h-1 mt-6"></div>
+      <div className=" bg-yellow-700 w-full h-1"></div>
+      <div className="flex">
+        <button
+          className="p-3"
+        // buymeacoffee.com/?via=artbbecketX
+        >
+          <Tooltip content="buy me a coffee" placement="right">
+            <IconContext.Provider value={{ color: "black", size: "2.5rem" }}>
+              <SiBuymeacoffee />
+            </IconContext.Provider>
+          </Tooltip>
         </button>
-        <h2>Thanks for visiting</h2>
-     </div>
-  </>
+      </div>
+    </>
   );
 }
 

@@ -3,7 +3,10 @@ import Image from "next/image";
 import Banner from "../components/Banner.js";
 import Nav from "../components/Nav.js";
 import Footer from "../components/Footer.js";
-// import styles from "../styles/Home.module.css";
+import Card from "../components/Card.js";
+// imported the dummy data for coffee stores and products
+import CoffeeStores from "../data/coffee-stores.json";
+// import CoffeeProducts from "../data/coffee-products.json";
 
 
 export default function Home() {
@@ -11,10 +14,11 @@ export default function Home() {
     image:
       "position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; position:right-[20%] z-index-1",
     imageWrapper: "relative w-full ",
+    cardLayout:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 align-middle justify-items-center",
   };
   const handleOnBannerBtnClick = () => {
     buttonTextStores;
-    buttonTextProducts
+    buttonTextProducts;
   };
   return (
     <div className={styles.container}>
@@ -26,7 +30,6 @@ export default function Home() {
         <Nav />
         <Image
           className={styles.image}
-          // look into putting a loader here as the image takes a while to load
           src="/static/Banner.png"
           alt="logo with coffee finder text"
           width={2000}
@@ -36,12 +39,28 @@ export default function Home() {
       <main>
         <Banner
           buttonTextStores="Java Joints"
-          buttonTextProducts="Java Juice"
+          buttonTextProducts="Java Juices"
           handleOnClick={handleOnBannerBtnClick}
         />
+        <div className={styles.cardLayout}>
+          {CoffeeStores.map((CoffeeStores) => {
+            return (
+              <Card
+                key={CoffeeStores.id}
+              name={CoffeeStores.name}
+              url={CoffeeStores.imgUrl}
+              href={`/coffee-stores/${CoffeeStores.id}`}
+              text="Find a coffee store near you and get your java fix"
+              />
+            );
+          })}
+        </div>
       </main>
-
-      <footer className="inset-px">
+      <footer
+        className="
+             inset-x-0
+             bottom-0"
+      >
         <Footer />
       </footer>
     </div>

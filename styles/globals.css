@@ -6,21 +6,27 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: GloriaHallelujah-Regular, CourierPrime-Regular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  /* set the background throuout the application with the gradiant I found at: meshgradient.com */
- /* height: 100vph;
- width: 100vph; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: url("/static/Background.png");
   background-posision: 100% 100%;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-size: fill;
   /* setting all color of my text to be this */
   color: #111111;
-
   width: 100vpw;
   height: 100vph;
-
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: GloriaHallelujah-Regular;
+}
+button {
+  font-family: GloriaHallelujah-Regular;
+}
+p {
+  font-family: CourierPrime-Regular;
 }
 /* 
 a {
