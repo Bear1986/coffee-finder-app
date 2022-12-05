@@ -1,22 +1,15 @@
 import { Modal, useModal, Button, Text, Tooltip } from "@nextui-org/react";
-import signature from "../public/static/signature.png";
-import Image from "next/image";
 
-export default function AboutModel() {
+export default function AboutModel(props) {
   const { setVisible, bindings } = useModal();
   return (
     <div>
-      <Tooltip content="About me" placement="bottom" color="invert">
+      <Tooltip content={props.TooltipText} placement={props.TooltipDirection} color="invert">
         <Button
           onClick={() => setVisible(true)}
           color="none"
         >
-          <Image
-            width={220}
-            src={signature}
-            alt="signature of Art Beckett"
-            className="pt-4"
-          />
+          {props.ButtonText}
         </Button>
       </Tooltip>
       <Modal
@@ -28,48 +21,14 @@ export default function AboutModel() {
       >
         <Modal.Header>
           <Text id="modal-title" size={40}>
-            Modal with a lot of content
+            {props.title}
           </Text>
         </Modal.Header>
         <Modal.Body>
           <Text id="modal-description">
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et. Cras mattis consectetur purus sit amet
-            fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
-            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
-            nisl consectetur et.
+            {props.description}
           </Text>
         </Modal.Body>
-        <Modal.Footer>
-          <Button auto flat color="error" onClick={() => setVisible(false)}>
-            Close
-          </Button>
-        </Modal.Footer>
       </Modal>
     </div>
   );
