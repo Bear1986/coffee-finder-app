@@ -6,9 +6,17 @@ export default function AboutModel() {
   const { setVisible, bindings } = useModal();
   return (
     <div>
-      <Tooltip content="about me" placement="bottom" color="invert">
-        <Button onClick={() => setVisible(true)} color="yellow">
-          <Image width={220} src={signature} alt="signature of Art Beckett" className="pt-3" />
+      <Tooltip content="About me" placement="bottom" color="invert">
+        <Button
+          onClick={() => setVisible(true)}
+          color="none"
+        >
+          <Image
+            width={220}
+            src={signature}
+            alt="signature of Art Beckett"
+            className="pt-4"
+          />
         </Button>
       </Tooltip>
       <Modal
@@ -60,9 +68,6 @@ export default function AboutModel() {
         <Modal.Footer>
           <Button auto flat color="error" onClick={() => setVisible(false)}>
             Close
-          </Button>
-          <Button auto onClick={() => setVisible(false)}>
-            Agree
           </Button>
         </Modal.Footer>
       </Modal>

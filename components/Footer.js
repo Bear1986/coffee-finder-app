@@ -12,7 +12,7 @@ function Footer() {
     <>
       <div className=" bg-[#111111] w-full h-1 mt-6"></div>
       <div className=" bg-yellow-700 w-full h-1"></div>
-      <div className="flex">
+      <div className="flex bg-white">
         <button
           className="p-3"
         // buymeacoffee.com/?via=artbbecketX

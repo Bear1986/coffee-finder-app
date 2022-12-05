@@ -11,10 +11,10 @@ import AboutModel from "./AboutModel";
 
 function Nav() {
   const styles = {
-    navWrapper: "display-flex flex-col bg-yellow-700 pl-3 shadow-2xl p-1",
+    navWrapper: "display-flex flex-col bg-white pl-3 shadow-2xl p-1",
     iconsWrapper: "justify-between w-[10rem] ",
     icons: "",
-    iconsButton: "hover:bg-yellow-500 rounded-full mt-2 ml-3",
+    iconsButton: "hover:bg-yellow-400 rounded-full mt-2 ml-3",
     buttonWrapper: "",
     button: "pt-1 bg-yellow-400  w-[10rem] text-center w-[12rem] shadow-2xl",
   };
@@ -43,9 +43,10 @@ function Nav() {
               </button>
             </IconContext.Provider>
           </div>
-<AboutModel />
+          <AboutModel />
         </div>
       </div>
+      <div className=" bg-yellow-700 w-full h-1"></div>
       <div className=" bg-[#111111] w-full h-1 mb-[1rem]"></div>
     </>
   );

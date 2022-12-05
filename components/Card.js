@@ -9,7 +9,7 @@ import { Tooltip } from "@nextui-org/react";
 const Card = (props) => {
   const styles = {
     cardWrapper:
-      "bg-yellow-700 bg-opacity-25 backdrop-blur-xxl drop-shadow-xl p-2 m-7  rounded-2xl  m-3 hover:bg-opacity-50",
+      "bg-white bg-opacity-25 backdrop-blur-xxl drop-shadow-xl p-2 m-7  rounded-2xl  m-3 hover:bg-opacity-50 transition:3",
   };
   return (
     <div className={styles.cardWrapper}>
