@@ -8,13 +8,13 @@ import Card from "../components/Card.js";
 import CoffeeStores from "../data/coffee-stores.json";
 // import CoffeeProducts from "../data/coffee-products.json";
 
-
 export default function Home() {
   const styles = {
     image:
       "position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; position:right-[20%] z-index-1",
     imageWrapper: "relative w-full ",
-    cardLayout:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 align-middle justify-items-center",
+    cardLayout:
+      "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 align-middle justify-items-center",
   };
   const handleOnBannerBtnClick = () => {
     buttonTextStores;
@@ -38,8 +38,12 @@ export default function Home() {
       </div>
       <main>
         <Banner
-          buttonTextStores="Java Joints"
-          buttonTextProducts="Java Juices"
+          buttonTextStores=<h1>
+            Java <span className="hover:text-[#FACC15]">Joints</span>
+          </h1>
+          buttonTextProducts=<h1>
+            Java <span className="hover:text-[#FACC15]">Juices</span>
+          </h1>
           handleOnClick={handleOnBannerBtnClick}
         />
         <div className={styles.cardLayout}>
@@ -47,10 +51,10 @@ export default function Home() {
             return (
               <Card
                 key={CoffeeStores.id}
-              name={CoffeeStores.name}
-              url={CoffeeStores.imgUrl}
-              href={`/coffee-stores/${CoffeeStores.id}`}
-              text="Find a coffee store near you and get your java fix"
+                name={CoffeeStores.name}
+                url={CoffeeStores.imgUrl}
+                href={`/coffee-stores/${CoffeeStores.id}`}
+                text="Find a coffee store near you and get your java fix"
               />
             );
           })}

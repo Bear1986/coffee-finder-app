@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Underline from "./Underline";
+import Overline from "./Overline";
 import { FaShareAlt } from "react-icons/fa";
 import { AiFillLike } from "react-icons/ai";
 import { IconContext } from "react-icons";
@@ -15,8 +17,7 @@ const Card = (props) => {
     <div className={styles.cardWrapper}>
       <Link href={props.href}>
         <h2 className="text-[2rem] p-1 text-center font-bold">{props.name}</h2>
-        <div className=" bg-[#111111] w-full h-1 "></div>
-        <div className=" bg-yellow-700 w-full h-1"></div>
+<Overline/>
         <div className="flex justify-center">
           <Image
             src={props.url}
@@ -26,8 +27,7 @@ const Card = (props) => {
             className="rounded-2xl p-1 "
           />
         </div>
-        <div className=" bg-yellow-700 w-full h-1"></div>
-        <div className=" bg-[#111111] w-full h-1 "></div>
+<Underline/>
         <div className="pt-1 pb-1">
           <p>{props.text}</p>
         </div>
