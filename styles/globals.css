@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: GloriaHallelujah-Regular;
+  src: url("/fonts/GloriaHallelujah-Regular.ttf");
+  src: url("/fonts/GloriaHallelujah-Regular.ttf");
+  url: ("/fonts/GloriaHallelujah-Regular.ttf");
+  url: ("GloriaHallelujah-Regular.ttf");
+}
 
 html,
 body {
@@ -25,10 +32,15 @@ h4,
 h5,
 h6 {
   font-family: GloriaHallelujah-Regular;
+  spacing: 0.3em;
+  letter-spacing: 0.1em;
+  margin: 0;
+  padding: 0;
 }
 button {
-  font-family: GloriaHallelujah-Regular;
+  font-family: GloriaHallelujah-Regular ;
 }
 p {
-  font-family: CourierPrime-Regular;
+  font-family: CourierPrime-Regular !important;
+  font-size: 1.2em;
 }

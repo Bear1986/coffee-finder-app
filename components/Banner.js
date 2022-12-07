@@ -9,12 +9,12 @@ const Banner = (props) => {
   };
   return (
     <div className={styles.container}>
-      <Tooltip content=<p>stores near me</p> placement="topStart" color="invert">
+      <Tooltip content="stores near me" placement="topStart" color="invert">
         <button className={styles.button} onClick={props.handleOnClick}>
           {props.buttonTextStores}
         </button>
       </Tooltip>
-      <Tooltip content=<p>best beans to buy</p> placement="topEnd" color="invert">
+      <Tooltip content="best beans to buy" placement="topEnd" color="invert">
         <button className={styles.button} onClick={props.handleOnClick}>
           {props.buttonTextProducts}
         </button>

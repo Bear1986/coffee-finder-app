@@ -53,7 +53,8 @@ export default function Home() {
                 key={CoffeeStores.id}
                 name={CoffeeStores.name}
                 url={CoffeeStores.imgUrl}
-                href={`/coffee-stores/${CoffeeStores.id}`}
+                href={`/coffee-stores/[name]`}
+                as={`/coffee-stores/${CoffeeStores.id}`}
                 text="Find a coffee store near you and get your java fix"
               />
             );

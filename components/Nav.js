@@ -3,7 +3,7 @@ import React from "react";
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 import {HiInformationCircle} from "react-icons/hi";
 import { IconContext } from "react-icons";
-//About
+// components
 import AboutModel from "./AboutModel";
 import Underline from "./Underline";
 
@@ -11,10 +11,6 @@ function Nav() {
   const styles = {
     navWrapper: "display-flex flex-col bg-white pl-3 shadow-2xl p-1",
     iconsWrapper: "justify-between w-[10rem] ",
-    icons: "",
-    iconsButton: "hover:bg-yellow-400 rounded-full mt-2 ml-3",
-    buttonWrapper: "",
-    button: "pt-1 bg-yellow-400  w-[10rem] text-center w-[12rem] shadow-2xl",
   };
   return (
     <div>
@@ -34,7 +30,7 @@ function Nav() {
                 </div>
               </button>
               <button>
-                <div className="hover:bg-[#4267B2] rounded-full mt-2 ml-3">
+                <div className="hover:bg-[#4267B2] rounded-full mt-2 ml-3"> 
                   <BsFacebook />
                 </div>
               </button>
