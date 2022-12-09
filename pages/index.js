@@ -32,7 +32,7 @@ export default function Home() {
           className={styles.image}
           src="/static/Banner.png"
           alt="logo with coffee finder text"
-          width={2000}
+          width={1300}
           height={500}
         />
       </div>

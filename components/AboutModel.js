@@ -1,16 +1,17 @@
-import { Modal, useModal, Button, Text, Tooltip } from "@nextui-org/react";
+import { Modal, useModal, Text, Tooltip } from "@nextui-org/react";
 
 export default function AboutModel(props) {
   const { setVisible, bindings } = useModal();
   return (
     <div>
       <Tooltip content={props.TooltipText} placement={props.TooltipDirection} color="invert">
-        <Button
+        <button
+          className=""
           onClick={() => setVisible(true)}
           color="none"
         >
           {props.ButtonText}
-        </Button>
+        </button>
       </Tooltip>
       <Modal
         scroll

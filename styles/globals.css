@@ -19,6 +19,7 @@ body {
 
   background: url("/static/Background.png");
   background-posision: 100% 100%;
+  repeat: no-repeat;
   width: 100vpw;
   height: 100vph;
   background-size: cover;
