@@ -12,8 +12,8 @@ import { SiBuymeacoffee } from "react-icons/si";
 function Footer() {
   return (
     <div>
-<Overline/>
-      <div className=" bg-white">
+      <Overline />
+      <div className=" bg-white shadow-xl">
         <div className="display-flex flex-row flex justify-between">
           <button
             className="p-3"

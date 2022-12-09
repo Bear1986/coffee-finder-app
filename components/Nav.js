@@ -10,7 +10,7 @@ import Underline from "./Underline";
 function Nav() {
   // styles
   const styles = {
-    navWrapper: "display-flex flex-col bg-white pl-3 shadow-2xl p-1",
+    navWrapper: "display-flex flex-col bg-white pl-3 shadow-2xl p-1 shadow-xl",
     iconsWrapper: "justify-between w-[10rem] ",
   };
   
@@ -22,7 +22,7 @@ function Nav() {
           <div>
             <IconContext.Provider value={{ color: "black", size: "2rem" }}>
               <button>
-                <div className="hover:bg-yellow-400 rounded-full mt-2 ml-3">
+                <div className="hover:bg-yellow-400 rounded-full mt-2 ml-3 ">
                   <BsGithub />
                 </div>
               </button>

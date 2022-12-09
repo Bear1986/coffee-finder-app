@@ -18,7 +18,7 @@ import { useState } from "react";
 const Card = (props) => {
   const styles = {
     cardWrapper:
-      "bg-white bg-opacity-25 backdrop-blur-xxl drop-shadow-xl p-2 m-7  rounded-2xl  m-3 hover:bg-opacity-50 transition:3 h-70 w-70",
+      "bg-white bg-opacity-25 backdrop-blur-xxl drop-shadow-xl p-2 m-7  rounded-2xl  m-3 hover:bg-opacity-50 transition:3 h-70 w-70 shadow-xl",
   };
   // is liked
   const [isLiked, setIsLiked] = useState(false);
@@ -38,7 +38,7 @@ const Card = (props) => {
         <h2 className="text-[2rem] p-1 text-center font-bold">{props.name}</h2>
         {/*is liked image*/}
         {isLiked && (
-          <div className="absolute top-0 left-0  text-center w-[2.5rem] h-[2.5rem] bg-white m-1 rounded-full shadow-md">
+          <div className="absolute top-0 left-0  text-center w-[2.5rem] h-[2.5rem] bg-white m-1 rounded-full  shadow-xl">
             <Image src={Like} alt="liked" width={50} height={20} />
           </div>
         )}
@@ -89,7 +89,6 @@ const Card = (props) => {
           <Tooltip content="dislike" placement="bottom" color="invert">
             <IconContext.Provider value={{ color: "black", size: "1.5rem" }}>
               <AiFillDislike
-                
                 onClick={
                   // if isdisliked then like is set to false
                   isDisliked

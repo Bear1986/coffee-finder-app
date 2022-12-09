@@ -2,18 +2,18 @@ import React from "react";
 import Link from "next/link";
 import { Tooltip } from "@nextui-org/react";
 import { useRouter } from "next/router";
-import Nav from "../../components/Nav";
 import Back from "../../components/Back";
 import Share from "../../components/Share";
+
 
 const CoffeeStore = () => {
   const router = useRouter();
   console.log("router", router);
   return (
     <div>
-      <Nav />
+      <div>
       <h1 className="text-center text-[2.5rem] pt-4">Coffee store page</h1>
-      
+      </div>
       <Tooltip content="back to stores" placement="right" color="invert">
         <Link
         href="/"
