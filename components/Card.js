@@ -9,7 +9,8 @@ import Like from "../public/static/likedIcon.png";
 // icons
 import { AiFillLike } from "react-icons/ai";
 import { AiFillDislike } from "react-icons/ai";
-import { FaPoop} from "react-icons/fa";
+import { IoRemoveCircleSharp } from "react-icons/io5";
+import { FaPoop } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { Tooltip } from "@nextui-org/react";
 //state
@@ -24,13 +25,21 @@ const Card = (props) => {
   const [isLiked, setIsLiked] = useState(false);
   const hadeleClickIsLiked = () => {
     setIsLiked(!isLiked);
+    setIsDisliked(false);
   };
   // is disliked
   const [isDisliked, setIsDisliked] = useState(false);
   const hadeleClickIsDisliked = () => {
     setIsDisliked(!isDisliked);
+    setIsLiked(false);
   };
-
+  // is removed
+  const [isRemoved, setIsRemoved] = useState(false);
+  const hadeleClickIsRemoved = () => {
+    setIsRemoved(!isRemoved);
+    setIsLiked(false);
+    setIsDisliked(false);
+  };
 
   return (
     <div className={styles.cardWrapper}>
@@ -64,15 +73,14 @@ const Card = (props) => {
           <p>{props.text}</p>
         </div>
       </Link>
-      <div className="flex space-x-3">
+      <div className="flex space-x-3 pt-2 pb-2 pl-2">
         <div className="flex justify-center content-center">
           <button className="hover:bg-yellow-400  rounded-full text-center w-[2rem] h-[2rem] flex justify-center content-center">
             <Tooltip content="like" placement="bottom" color="invert">
-              <IconContext.Provider value={{ color: "black", size: "1.5rem" }}>
+              <IconContext.Provider value={{ color: "black", size: "2rem" }}>
                 <AiFillLike
-                  className="mt-[0.3rem]"
+                  
                   onClick={
-                    // if isliked then dislike is set to false
                     isLiked
                       ? () => {
                           setIsLiked(!isLiked);
@@ -87,10 +95,9 @@ const Card = (props) => {
         </div>
         <button className="hover:bg-yellow-400  rounded-full text-center w-[2rem] h-[2rem] pt-1 flex justify-center content-center">
           <Tooltip content="dislike" placement="bottom" color="invert">
-            <IconContext.Provider value={{ color: "black", size: "1.5rem" }}>
+            <IconContext.Provider value={{ color: "black", size: "2rem" }}>
               <AiFillDislike
                 onClick={
-                  // if isdisliked then like is set to false
                   isDisliked
                     ? () => {
                         setIsDisliked(!isDisliked);
@@ -102,6 +109,29 @@ const Card = (props) => {
             </IconContext.Provider>
           </Tooltip>
         </button>
+        {isLiked || isDisliked ? (
+          <button className=" rounded-full text-center w-[2rem] h-[2rem]  flex justify-center content-center">
+            <Tooltip
+              content={isLiked ? "remove your like" : "remove your dislike"}
+              placement="right"
+              color="invert"
+            >
+              <IconContext.Provider value={{ color: "black", size: "2rem" }}>
+                <IoRemoveCircleSharp
+                  onClick={
+                    isRemoved
+                      ? () => {
+                          setIsRemoved(!isRemoved);
+                          setIsLiked(false);
+                          setIsDisliked(false);
+                        }
+                      : hadeleClickIsRemoved
+                  }
+                />
+              </IconContext.Provider>
+            </Tooltip>
+          </button>
+        ) : null}
       </div>
     </div>
   );
